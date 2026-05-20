@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { IBM_Plex_Sans_Thai, IBM_Plex_Serif, IBM_Plex_Mono } from 'next/font/google';
+import ChatbotWidget from '@/components/features/chatbot/ChatbotWidget';
 import './globals.css';
 
 const ibmPlexSansThai = IBM_Plex_Sans_Thai({
@@ -41,7 +42,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="th"
       className={`${ibmPlexSansThai.variable} ${ibmPlexSerif.variable} ${ibmPlexMono.variable}`}
     >
-      <body className="min-h-screen bg-paper text-ink antialiased">{children}</body>
+      <body className="min-h-screen bg-paper text-ink antialiased">
+        {children}
+        <ChatbotWidget />
+      </body>
     </html>
   );
 }
