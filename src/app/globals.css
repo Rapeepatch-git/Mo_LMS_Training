@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Pannya Design Tokens ─────────────────────────────────── */
+:root {
+  --ink:         #1a1f2e;
+  --ink-2:       #2a3142;
+  --ink-3:       #5a6275;
+  --ink-4:       #8a92a6;
+  --paper:       #fbf9f3;
+  --cream:       #f6f2e8;
+  --cream-2:     #efeadb;
+  --line:        #e6e2d8;
+  --coral:       #d4623f;
+  --coral-dark:  #b8512f;
+  --coral-soft:  #f4d8c8;
+  --gold:        #c9a14a;
+  --amber-soft:  #f0e3c4;
+  --sage:        #6a8f6a;
+  --sage-soft:   #dde6d8;
+  --plum:        #6b3d52;
+
+  /* spacing */
+  --page-x: 48px;
+  --section-y: 72px;
+}
+
+/* ─── Base ──────────────────────────────────────────────────── */
+html {
+  font-family: 'IBM Plex Sans Thai', 'IBM Plex Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--paper);
+}
+
+/* ─── Placeholder thumbnails ─────────────────────────────────── */
+.ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.5);
+}
+.ph.dark   { background: var(--ink); }
+.ph.coral  { background: #c05535; }
+.ph.sage   { background: var(--sage); }
+.ph.gold   { background: #9a7a30; }
+.ph.plum   { background: var(--plum); }
+.ph.cream  { background: var(--cream-2); color: var(--ink-4); }
+.ph.navy   { background: #1a1f2e; }
+
+/* ─── Typography helpers ─────────────────────────────────────── */
+.serif {
+  font-family: 'IBM Plex Serif', Georgia, serif;
+  letter-spacing: -0.02em;
+}
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
